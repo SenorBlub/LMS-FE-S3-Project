@@ -20,5 +20,7 @@
   height: 198px;
   padding-left: 22px;
   padding-right: 22px;
+  padding-top: 13px;
+  padding-bottom: 13px;
 }
 </style>
