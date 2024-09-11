@@ -17,12 +17,12 @@
       id="login-password"
       placeholder="Password"
     />
-    <button
-      class="login-button purple-main-bg text-medium grey-darkest-text round-edges shadow-out no-border"
-    >
-      Log In
-    </button>
   </div>
+  <button
+    class="login-button purple-main-bg text-medium grey-darkest-text round-edges shadow-out no-border"
+  >
+    Log In
+  </button>
 </template>
 
 <style scoped>
@@ -39,6 +39,7 @@
   width: 416px;
   height: 56px;
   padding-left: 15px;
+  padding-top: 13px;
 }
 
 .login-button {
