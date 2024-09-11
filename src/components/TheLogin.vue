@@ -52,7 +52,7 @@
 }
 
 .login-button {
-  width: 160px;
+  width: 480px;
   height: 56px;
   align-content: center;
   align-self: center;
