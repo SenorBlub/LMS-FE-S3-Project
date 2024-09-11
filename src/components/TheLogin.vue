@@ -18,5 +18,7 @@
 .container {
   width: 460px;
   height: 198px;
+  padding-left: 22px;
+  padding-right: 22px;
 }
 </style>
