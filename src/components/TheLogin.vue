@@ -63,6 +63,6 @@
   padding: 13px;
   width: 480px;
   height: 56px;
-  align-content: center;
+  text-align: center;
 }
 </style>
