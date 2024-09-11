@@ -5,7 +5,7 @@ import TheRegister from './TheRegister.vue'
 </script>
 
 <template>
-  <div class="container">
+  <div class="container grey-darkest-bg alpha-80 round-edges">
     <TheLogin />
     <TheRegister />
   </div>
@@ -13,4 +13,8 @@ import TheRegister from './TheRegister.vue'
 
 <style scoped>
 /* style components here, don't forget media tag for mobile or portrait mode users */
+.container {
+  width: 480px;
+  height: 720px; /* TODO MEDIA TAG */
+}
 </style>

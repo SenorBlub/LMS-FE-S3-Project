@@ -5,9 +5,11 @@ import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
+import LoginRegister from './LoginRegister.vue'
 </script>
 
 <template>
+  <LoginRegister></LoginRegister>
   <WelcomeItem>
     <template #icon>
       <DocumentationIcon />
