@@ -19,6 +19,7 @@
       placeholder="Password"
     />
     <input />
+    <button class="text-medium grey-darkest-text round-edges shadow-out no-border">Log In</button>
   </div>
 </template>
 
