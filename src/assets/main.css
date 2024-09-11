@@ -16,7 +16,7 @@ a,
 }
 
 * {
-  font-family: ibm-plex-mono;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 .text-biggest {
@@ -147,6 +147,14 @@ a,
 
 .round-edges {
   border-radius: 35px;
+}
+
+.shadow-out {
+  box-shadow: 4px 0px 4px;
+}
+
+.shadow-in {
+  box-shadow: 0px 0px 8px inset;
 }
 
 @media (hover: hover) {
