@@ -12,7 +12,7 @@
       placeholder="Username"
     />
     <input
-      type="hidden"
+      type="password"
       class="login-input grey-light-bg text-medium placeholder-text grey-darkest-text round-edges shadow-out no-border"
       id="login-password"
       placeholder="Password"
