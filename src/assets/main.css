@@ -16,6 +16,7 @@ a,
 
 * {
   font-family: 'IBM Plex Mono', monospace;
+  line-height: 1;
 }
 
 .text-biggest {
