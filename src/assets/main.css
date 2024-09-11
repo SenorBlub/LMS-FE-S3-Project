@@ -15,6 +15,140 @@ a,
   padding: 3px;
 }
 
+text {
+  font-family: ibm-plex-mono;
+}
+
+.text-biggest {
+  font-size: 52px;
+}
+
+.text-bigger {
+  font-size: 45px;
+}
+
+.text-big {
+  font-size: 40px;
+}
+
+.text-medium {
+  font-size: 36px;
+}
+
+.text-small {
+  font-size: 30px;
+}
+
+.text-smaller {
+  font-size: 22px;
+}
+
+.text-smallest {
+  font-size: 20px;
+}
+
+.grey-darkest-text {
+  color: #242424;
+}
+.grey-darkest-bg {
+  background-color: #242424;
+}
+.grey-darkest-border {
+  border-color: #242424;
+}
+
+.grey-dark-text {
+  color: #999999;
+}
+.grey-dark-bg {
+  background-color: #999999;
+}
+.grey-dark-border {
+  border-color: #999999;
+}
+
+.grey-medium-text {
+  color: #bababa;
+}
+.grey-medium-bg {
+  background-color: #bababa;
+}
+.grey-medium-border {
+  border-color: #bababa;
+}
+
+.grey-light-text {
+  color: #d9d9d9;
+}
+.grey-light-bg {
+  background-color: #d9d9d9;
+}
+.grey-light-border {
+  border-color: #d9d9d9;
+}
+
+.grey-lightest-text {
+  color: #ffffff;
+}
+.grey-lightest-bg {
+  background-color: #ffffff;
+}
+.grey-lightest-border {
+  border-color: #ffffff;
+}
+
+.purple-main-text {
+  color: #b76be9;
+}
+.purple-main-bg {
+  background-color: #b76be9;
+}
+.purple-main-border {
+  border-color: #b76be9;
+}
+
+.red-main-text {
+  color: #ff4e3e;
+}
+.red-main-bg {
+  background-color: #ff4e3e;
+}
+.red-main-border {
+  border-color: #ff4e3e;
+}
+
+.orange-main-text {
+  color: #ec8542;
+}
+.orange-main-bg {
+  background-color: #ec8542;
+}
+.orange-main-border {
+  border-color: #ec8542;
+}
+
+.green-main-text {
+  color: #54cd76;
+}
+.green-main-bg {
+  background-color: #54cd76;
+}
+.green-main-border {
+  border-color: #54cd76;
+}
+/* Thanks you internet magicians */
+.round-dashed-border {
+  border: 5px solid transparent;
+  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Ccircle cx='5' cy='5' r='4' fill='none' stroke='black' stroke-width='2'/%3E%3C/svg%3E")
+    10 round;
+  padding: 20px;
+  width: fit-content;
+}
+
+.round-edges {
+  border-radius: 35px;
+}
+
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
