@@ -57,6 +57,10 @@ a,
   border-color: #242424;
 }
 
+.placeholder-text::placeholder {
+  color: #999999;
+}
+
 .grey-dark-text {
   color: #999999;
 }
