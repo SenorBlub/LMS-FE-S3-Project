@@ -149,6 +149,10 @@ a,
   width: fit-content;
 }
 
+.no-border {
+  border: 0px;
+}
+
 .round-edges {
   border-radius: 35px;
 }

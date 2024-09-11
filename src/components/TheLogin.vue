@@ -7,14 +7,14 @@
     <h1 class="text-bigger grey-darkest-text">LOG IN</h1>
     <input
       type="text"
-      class="text-medium placeholder-text grey-darkest-text round-edges"
+      class="text-medium placeholder-text grey-darkest-text round-edges shadow-out no-border"
       id="login-username"
       placeholder="Username"
     />
     <input />
     <input
       type="hidden"
-      class="text-medium placeholder-text grey-darkest-text round-edges"
+      class="text-medium placeholder-text grey-darkest-text round-edges shadow-out no-border"
       id="login-password"
       placeholder="Password"
     />
