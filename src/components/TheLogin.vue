@@ -41,7 +41,6 @@
   width: 416px;
   height: 56px;
   padding-left: 15px;
-  margin-top: 13px;
 }
 
 .login-button {
