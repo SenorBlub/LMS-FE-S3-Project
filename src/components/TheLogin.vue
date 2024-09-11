@@ -7,17 +7,19 @@
     <h1 class="text-bigger grey-darkest-text">LOG IN</h1>
     <input
       type="text"
-      class="login-input text-medium placeholder-text grey-darkest-text round-edges shadow-out no-border"
+      class="login-input grey-light-bg text-medium placeholder-text grey-darkest-text round-edges shadow-out no-border"
       id="login-username"
       placeholder="Username"
     />
     <input
       type="hidden"
-      class="login-input text-medium placeholder-text grey-darkest-text round-edges shadow-out no-border"
+      class="login-input grey-light-bg text-medium placeholder-text grey-darkest-text round-edges shadow-out no-border"
       id="login-password"
       placeholder="Password"
     />
-    <button class="login-button text-medium grey-darkest-text round-edges shadow-out no-border">
+    <button
+      class="login-button purple-main-bg text-medium grey-darkest-text round-edges shadow-out no-border"
+    >
       Log In
     </button>
   </div>
