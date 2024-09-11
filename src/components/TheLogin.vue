@@ -5,7 +5,7 @@
 <template>
   <div>
     <div class="container grey-lightest-bg round-edges">
-      <h1 class="text-bigger grey-darkest-text">LOG IN</h1>
+      <h1 class="header-text text-bigger grey-darkest-text">LOG IN</h1>
       <input
         type="text"
         class="login-input grey-light-bg text-medium placeholder-text grey-darkest-text round-edges shadow-out no-border"
@@ -19,15 +19,21 @@
         placeholder="Password"
       />
     </div>
-    <button
-      class="login-button purple-main-bg text-medium grey-darkest-text round-edges shadow-out no-border"
-    >
-      Log In
-    </button>
+    <div class="button-tamer-div">
+      <button
+        class="login-button purple-main-bg text-medium grey-darkest-text round-edges shadow-out no-border"
+      >
+        Log In
+      </button>
+    </div>
   </div>
 </template>
 
 <style scoped>
+.header-text {
+  -webkit-text-stroke-width: thin;
+}
+
 .container {
   width: 460px;
   height: 198px;
@@ -50,6 +56,13 @@
   height: 56px;
   align-content: center;
   align-self: center;
-  -webkit-text-stroke-width: thin;
+  text-indent: 0px;
+}
+
+.button-tamer-div {
+  padding: 13px;
+  width: 160px;
+  height: 56px;
+  align-content: center;
 }
 </style>
