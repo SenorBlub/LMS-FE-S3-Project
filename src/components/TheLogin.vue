@@ -14,4 +14,9 @@
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.container {
+  width: 460px;
+  height: 198px;
+}
+</style>

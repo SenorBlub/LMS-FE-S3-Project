@@ -16,5 +16,6 @@ import TheRegister from './TheRegister.vue'
 .container {
   width: 480px;
   height: 720px; /* TODO MEDIA TAG */
+  padding: 10px;
 }
 </style>
