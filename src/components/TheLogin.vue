@@ -8,7 +8,15 @@
     <input
       type="text"
       class="text-medium placeholder-text grey-darkest-text round-edges"
+      id="login-username"
       placeholder="Username"
+    />
+    <input />
+    <input
+      type="hidden"
+      class="text-medium placeholder-text grey-darkest-text round-edges"
+      id="login-password"
+      placeholder="Password"
     />
     <input />
   </div>
