@@ -35,12 +35,14 @@
   padding-right: 22px;
   padding-top: 13px;
   padding-bottom: 13px;
+  align-content: center;
 }
 
 .login-input {
   width: 416px;
   height: 56px;
   padding-left: 15px;
+  margin-top: 9px; /* thanks figma... */
 }
 
 .login-button {
