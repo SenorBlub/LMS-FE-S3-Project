@@ -158,11 +158,11 @@ a,
 }
 
 .shadow-out {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
 }
 
 .shadow-in {
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4) inset;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6) inset;
 }
 
 .alpha-20 {
