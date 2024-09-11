@@ -49,5 +49,7 @@
   width: 160px;
   height: 56px;
   align-content: center;
+  align-self: center;
+  -webkit-text-stroke-width: thin;
 }
 </style>
