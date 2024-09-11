@@ -52,7 +52,7 @@
 }
 
 .login-button {
-  width: 480px;
+  width: 160px;
   height: 56px;
   align-content: center;
   align-self: center;
@@ -61,7 +61,7 @@
 
 .button-tamer-div {
   padding: 13px;
-  width: 160px;
+  width: 480px;
   height: 56px;
   align-content: center;
 }
