@@ -31,7 +31,6 @@
   height: 198px;
   padding-left: 22px;
   padding-right: 22px;
-  padding-top: 13px;
   padding-bottom: 13px;
 }
 
@@ -39,7 +38,7 @@
   width: 416px;
   height: 56px;
   padding-left: 15px;
-  padding-top: 13px;
+  margin-top: 13px;
 }
 
 .login-button {
