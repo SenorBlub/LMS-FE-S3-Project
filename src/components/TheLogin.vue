@@ -19,7 +19,9 @@
       placeholder="Password"
     />
     <input />
-    <button class="text-medium grey-darkest-text round-edges shadow-out no-border">Log In</button>
+    <button class="login-button text-medium grey-darkest-text round-edges shadow-out no-border">
+      Log In
+    </button>
   </div>
 </template>
 
@@ -31,5 +33,11 @@
   padding-right: 22px;
   padding-top: 13px;
   padding-bottom: 13px;
+}
+
+.login-button {
+  width: 160px;
+  height: 56px;
+  align-content: center;
 }
 </style>
