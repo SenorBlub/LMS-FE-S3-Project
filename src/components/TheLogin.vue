@@ -60,7 +60,7 @@
 }
 
 .button-tamer-div {
-  padding: 13px;
+  margin-top: 13px;
   width: 480px;
   height: 56px;
   text-align: center;
