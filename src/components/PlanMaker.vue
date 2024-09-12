@@ -54,6 +54,7 @@
   width: 460px;
   height: 56px;
   text-align: center;
+  display: flex;
 }
 
 .sub-button-tamer {
