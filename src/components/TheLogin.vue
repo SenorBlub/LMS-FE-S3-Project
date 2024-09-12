@@ -20,7 +20,7 @@
         placeholder="Password"
       />
     </div>
-    <div class="button-tamer-div">
+    <div class="button-tamer">
       <button
         class="button-normal purple-main-bg text-small grey-darkest-text round-edges shadow-out no-border"
       >
@@ -49,7 +49,7 @@
   margin-top: 9px; /* thanks figma... */
 }
 
-.button-tamer-div {
+.button-tamer {
   margin-top: 13px;
   margin-bottom: 13px;
   width: 480px;

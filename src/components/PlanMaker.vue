@@ -18,7 +18,23 @@
       />
     </div>
     <!-- handle the cool drop-in menus-->
+    <div class="button-tamer">
+      <button
+        class="button-normal purple-main-bg text-small grey-darkest-text round-edges shadow-out no-border"
+      ></button>
+      <button
+        class="button-normal red-main-bg text-small grey-lightest-text round-edges shadow-out no-border"
+      ></button>
+    </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.button-tamer {
+  margin-top: 13px;
+  margin-bottom: 13px;
+  width: 480px;
+  height: 56px;
+  text-align: center;
+}
+</style>
