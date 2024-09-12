@@ -231,6 +231,23 @@ a,
   text-indent: 0px;
 }
 
+.button-normal:hover {
+  .animate-shadow {
+    animation: moveShadow 3s infinite alternate;
+  }
+
+  @keyframes moveShadow {
+    0% {
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
+      transform: scale(1); /* Initial position */
+    }
+    100% {
+      box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6); /* Increased size and blur */
+      transform: scale(1.05);
+    }
+  }
+}
+
 .wrapper-small {
   width: 480px;
   height: 720px;
