@@ -15,8 +15,7 @@
         class="input-text-bigger grey-light-bg text-medium placeholder-text grey-darkest-text round-edges shadow-out no-border"
         id="plan-description"
         placeholder="Description"
-      >
-      </textarea>
+      ></textarea>
     </div>
     <!-- handle the cool drop-in menus-->
     <div class="button-tamer">
