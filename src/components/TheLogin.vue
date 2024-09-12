@@ -23,7 +23,7 @@
     </div>
     <div class="button-tamer-div">
       <button
-        class="login-button purple-main-bg text-medium grey-darkest-text round-edges shadow-out no-border"
+        class="login-button purple-main-bg text-small grey-darkest-text round-edges shadow-out no-border"
       >
         Log In
       </button>
@@ -64,6 +64,7 @@
 
 .button-tamer-div {
   margin-top: 13px;
+  margin-bottom: 13px;
   width: 480px;
   height: 56px;
   text-align: center;

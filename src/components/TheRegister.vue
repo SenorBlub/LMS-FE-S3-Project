@@ -5,7 +5,7 @@
 <template>
   <div>
     <div class="container grey-lightest-bg round-edges">
-      <h1 class="header-text text-bigger grey-darkest-text">LOG IN</h1>
+      <h1 class="header-text text-bigger grey-darkest-text">REGISTER</h1>
       <!-- <form  @submit.prevent="handleLogin" > -->
       <!-- Add form block with submit handler -->
       <input
@@ -35,7 +35,7 @@
     </div>
     <div class="button-tamer-div">
       <button
-        class="register-button purple-main-bg text-medium grey-darkest-text round-edges shadow-out no-border"
+        class="register-button purple-main-bg text-small grey-darkest-text round-edges shadow-out no-border"
       >
         Register
       </button>
@@ -76,6 +76,7 @@
 
 .button-tamer-div {
   margin-top: 13px;
+  margin-bottom: 13px;
   width: 480px;
   height: 56px;
   text-align: center;
