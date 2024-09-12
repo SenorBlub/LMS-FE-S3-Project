@@ -30,6 +30,16 @@
 </template>
 
 <style scoped>
+.container {
+  width: 460px;
+  height: 362px;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  align-content: center;
+}
+
 .button-tamer {
   margin-top: 13px;
   margin-bottom: 13px;
