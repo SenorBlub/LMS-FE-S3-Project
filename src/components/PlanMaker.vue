@@ -52,13 +52,13 @@
 .button-tamer {
   margin-top: 13px;
   margin-bottom: 13px;
-  width: 480px;
+  width: 460px;
   height: 56px;
   text-align: center;
 }
 
 .sub-button-tamer {
-  width: 240px;
+  width: 230px;
   height: 56px;
   text-align: center;
 }
