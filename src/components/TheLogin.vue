@@ -6,6 +6,8 @@
   <div>
     <div class="container grey-lightest-bg round-edges">
       <h1 class="header-text text-bigger grey-darkest-text">LOG IN</h1>
+      <!-- <form  @submit.prevent="handleLogin" > -->
+      <!-- Add form block with submit handler -->
       <input
         type="text"
         class="login-input grey-light-bg text-medium placeholder-text grey-darkest-text round-edges shadow-out no-border"
@@ -26,6 +28,7 @@
         Log In
       </button>
     </div>
+    <!-- </form>-->
   </div>
 </template>
 
