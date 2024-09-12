@@ -18,6 +18,12 @@
       ></textarea>
     </div>
     <!-- handle the cool drop-in menus-->
+    <div class="input-file text-medium grey-dark-text round-edges shadow-in round-dashed-border">
+      Add date(s)
+    </div>
+    <div class="input-file text-medium grey-dark-text round-edges shadow-in round-dashed-border">
+      Add activity
+    </div>
     <div class="button-tamer">
       <div class="sub-button-tamer">
         <button
