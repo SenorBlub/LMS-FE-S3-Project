@@ -185,6 +185,25 @@ a,
   opacity: 1; /* 100% opacity (fully opaque) */
 }
 
+.input-text {
+  width: 416px;
+  height: 56px;
+  padding-left: 15px;
+  margin-top: 9px; /* thanks figma... */
+}
+
+.input-file {
+  /* empty for now */
+}
+
+.button-normal {
+  width: 160px;
+  height: 56px;
+  align-content: center;
+  align-self: center;
+  text-indent: 0px;
+}
+
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);

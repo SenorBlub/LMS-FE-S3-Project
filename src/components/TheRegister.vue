@@ -10,32 +10,32 @@
       <!-- Add form block with submit handler -->
       <input
         type="text"
-        class="register-input grey-light-bg text-medium placeholder-text grey-darkest-text round-edges shadow-out no-border"
+        class="input-text grey-light-bg text-medium placeholder-text grey-darkest-text round-edges shadow-out no-border"
         id="register-username"
         placeholder="Username"
       />
       <input
         type="text"
-        class="register-input grey-light-bg text-medium placeholder-text grey-darkest-text round-edges shadow-out no-border"
+        class="input-text grey-light-bg text-medium placeholder-text grey-darkest-text round-edges shadow-out no-border"
         id="register-email"
         placeholder="Email"
       />
       <input
         type="password"
-        class="register-input grey-light-bg text-medium placeholder-text grey-darkest-text round-edges shadow-out no-border"
+        class="input-text grey-light-bg text-medium placeholder-text grey-darkest-text round-edges shadow-out no-border"
         id="register-password"
         placeholder="Password"
       />
       <input
         type="password"
-        class="register-input grey-light-bg text-medium placeholder-text grey-darkest-text round-edges shadow-out no-border"
+        class="input-text grey-light-bg text-medium placeholder-text grey-darkest-text round-edges shadow-out no-border"
         id="register-password-confirm"
         placeholder="Repeat password"
       />
     </div>
     <div class="button-tamer-div">
       <button
-        class="register-button purple-main-bg text-small grey-darkest-text round-edges shadow-out no-border"
+        class="button-normal purple-main-bg text-small grey-darkest-text round-edges shadow-out no-border"
       >
         Register
       </button>
@@ -64,14 +64,6 @@
   height: 56px;
   padding-left: 15px;
   margin-top: 9px; /* thanks figma... */
-}
-
-.register-button {
-  width: 160px;
-  height: 56px;
-  align-content: center;
-  align-self: center;
-  text-indent: 0px;
 }
 
 .button-tamer-div {

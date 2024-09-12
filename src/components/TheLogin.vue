@@ -10,20 +10,20 @@
       <!-- Add form block with submit handler -->
       <input
         type="text"
-        class="login-input grey-light-bg text-medium placeholder-text grey-darkest-text round-edges shadow-out no-border"
+        class="input-text grey-light-bg text-medium placeholder-text grey-darkest-text round-edges shadow-out no-border"
         id="login-username"
         placeholder="Username"
       />
       <input
         type="password"
-        class="login-input grey-light-bg text-medium placeholder-text grey-darkest-text round-edges shadow-out no-border"
+        class="input-text grey-light-bg text-medium placeholder-text grey-darkest-text round-edges shadow-out no-border"
         id="login-password"
         placeholder="Password"
       />
     </div>
     <div class="button-tamer-div">
       <button
-        class="login-button purple-main-bg text-small grey-darkest-text round-edges shadow-out no-border"
+        class="button-normal purple-main-bg text-small grey-darkest-text round-edges shadow-out no-border"
       >
         Log In
       </button>
@@ -52,14 +52,6 @@
   height: 56px;
   padding-left: 15px;
   margin-top: 9px; /* thanks figma... */
-}
-
-.login-button {
-  width: 160px;
-  height: 56px;
-  align-content: center;
-  align-self: center;
-  text-indent: 0px;
 }
 
 .button-tamer-div {
