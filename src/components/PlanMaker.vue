@@ -19,12 +19,20 @@
     </div>
     <!-- handle the cool drop-in menus-->
     <div class="button-tamer">
-      <button
-        class="button-normal purple-main-bg text-small grey-darkest-text round-edges shadow-out no-border"
-      ></button>
-      <button
-        class="button-normal red-main-bg text-small grey-lightest-text round-edges shadow-out no-border"
-      ></button>
+      <div class="sub-button-tamer">
+        <button
+          class="button-normal purple-main-bg text-small grey-darkest-text round-edges shadow-out no-border"
+        >
+          Plan
+        </button>
+      </div>
+      <div class="sub-button-tamer">
+        <button
+          class="button-normal red-main-bg text-small grey-lightest-text round-edges shadow-out no-border"
+        >
+          Cancel
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -44,6 +52,12 @@
   margin-top: 13px;
   margin-bottom: 13px;
   width: 480px;
+  height: 56px;
+  text-align: center;
+}
+
+.sub-button-tamer {
+  width: 240px;
   height: 56px;
   text-align: center;
 }
