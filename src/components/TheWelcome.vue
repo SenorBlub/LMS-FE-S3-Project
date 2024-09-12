@@ -6,10 +6,12 @@ import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
 import LoginRegister from './LoginRegister.vue'
+import PlanMaker from './PlanMaker.vue'
 </script>
 
 <template>
-  <LoginRegister></LoginRegister>
+  <LoginRegister />
+  <PlanMaker />
   <WelcomeItem>
     <template #icon>
       <DocumentationIcon />
