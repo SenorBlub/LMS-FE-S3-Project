@@ -199,13 +199,16 @@ a,
 .input-text-big {
   width: 380px;
   height: 170px;
+  padding-top: 15px;
   padding-left: 15px;
   margin-top: 9px;
+  text-align: start;
 }
 
 .input-text-bigger {
   width: 416px;
   height: 190px;
+  padding-top: 15px;
   padding-left: 15px;
   margin-top: 9px;
 }
