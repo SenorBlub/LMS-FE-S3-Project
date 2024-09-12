@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import PlanMaker from './components/PlanMaker.vue'
 import '@fontsource/ibm-plex-mono'
 </script>
 
@@ -15,6 +16,7 @@ import '@fontsource/ibm-plex-mono'
 
   <main>
     <TheWelcome />
+    <PlanMaker />
   </main>
 </template>
 

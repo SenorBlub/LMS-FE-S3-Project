@@ -5,9 +5,8 @@
 <template>
   <div>
     <div class="container grey-lightest-bg round-edges">
-      <h1 class="header-text text-bigger grey-darkest-text">REGISTER</h1>
+      <h1 class="bold-title text-bigger grey-darkest-text">REGISTER</h1>
       <!-- <form  @submit.prevent="handleLogin" > -->
-      <!-- Add form block with submit handler -->
       <input
         type="text"
         class="input-text grey-light-bg text-medium placeholder-text grey-darkest-text round-edges shadow-out no-border"
@@ -45,10 +44,6 @@
 </template>
 
 <style scoped>
-.header-text {
-  -webkit-text-stroke-width: thin;
-}
-
 .container {
   width: 460px;
   height: 342px;
