@@ -146,9 +146,8 @@ a,
 }
 /* Thanks you internet magicians */
 .round-dashed-border {
-  border: 5px solid transparent;
-  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Ccircle cx='5' cy='5' r='4' fill='none' stroke='black' stroke-width='2'/%3E%3C/svg%3E")
-    10 round;
+  border: 5px dashed #b76be9;
+  border-radius: 35px;
   padding: 20px;
   width: fit-content;
 }
@@ -218,7 +217,7 @@ a,
 .input-file {
   width: 460px;
   height: 106px;
-  margin-top: 9px;
+  margin-top: 22px;
   text-align: center;
   background: rgba(0, 0, 0, 0); /* invisible, use with background */
 }
