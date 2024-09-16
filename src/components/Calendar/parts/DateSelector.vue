@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
-<template>
-  <h1>empty file</h1>
-</template>
+
+<template>anything</template>
+
 <style scoped></style>

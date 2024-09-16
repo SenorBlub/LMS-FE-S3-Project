@@ -7,9 +7,11 @@ import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
 import LoginRegister from './LoginRegister.vue'
 import PlanMaker from './PlanMaker.vue'
+import TheCalendar from './Calendar/TheCalendar.vue'
 </script>
 
 <template>
   <LoginRegister />
   <PlanMaker />
+  <TheCalendar />
 </template>

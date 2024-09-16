@@ -253,6 +253,17 @@ a,
   padding: 10px;
 }
 
+.wrapper-side {
+  width: 450px;
+  height: 140px;
+  padding: 20px;
+}
+
+.wrapper-big {
+  width: 1920px;
+  height: 1080px;
+}
+
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
