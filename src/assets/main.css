@@ -160,6 +160,10 @@ a,
   border-radius: 35px;
 }
 
+.round-full {
+  border-radius: 9999px;
+}
+
 .shadow-out {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
 }
