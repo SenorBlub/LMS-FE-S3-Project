@@ -2,7 +2,11 @@
 
 <template>
   <div class="wrapper-side grey-light-bg text-center grey-darkest-text text-small round-edges">
-    <div class="profile-picture grey-lightest-bg grey-darkest-text text-small round-full">PFP</div>
+    <div
+      class="profile-picture text-center grey-lightest-bg grey-darkest-text text-small round-full"
+    >
+      PFP
+    </div>
     <div>USERNAME</div>
   </div>
 </template>
