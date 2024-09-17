@@ -1,13 +1,15 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="wrapper-side grey-light-bg text-center grey-darkest-text text-small round-edges">
+  <div
+    class="wrapper-side grey-light-bg text-center content-center justify-items-center grey-darkest-text text-small round-edges"
+  >
     <div
-      class="profile-picture text-center grey-lightest-bg grey-darkest-text text-small round-full"
+      class="profile-picture text-center justify-items-center grey-lightest-bg grey-darkest-text text-small round-full"
     >
       PFP
     </div>
-    <div>USERNAME</div>
+    <div class="text-center">USERNAME</div>
   </div>
 </template>
 
