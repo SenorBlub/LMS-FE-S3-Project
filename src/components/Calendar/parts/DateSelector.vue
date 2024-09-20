@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 
-const selectedDayIndex = ref<[number, number] | null>(null)
+const selectedDayIndex = ref<[number, number]>()
 const month = 'september' //reference a store for date here
 const year = 2024 //reference a store for date here
 const daysInMonth = [
@@ -9,8 +9,8 @@ const daysInMonth = [
   28, 29, 30
 ]
 const previousMonthLength = 31
-let leading: number[] | null = []
-let trailing: number[] | null = []
+let leading: number[] = []
+let trailing: number[] = []
 
 const daysOnCalendar = (selectedMonth: number[], previousMonthLength: number) => {
   const leftoverDays = 35 - selectedMonth.length
