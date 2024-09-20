@@ -43,7 +43,7 @@ const chunkArray = (arr: number[], chunkSize: number, leadingEmptyDays: number) 
   const result = []
   let currentWeek = []
   for (let i = 0; i < leadingEmptyDays; i += chunkSize) {
-    currentWeek.push(null)
+    currentWeek.push(99)
   }
   for (let i = 0; i < arr.length; i++) {
     currentWeek.push(arr[i])
