@@ -39,9 +39,6 @@ const daysOnCalendar = (selectedMonth: number[], previousMonthLength: number) =>
   return result
 }
 
-const minMonthDay = 1
-const maxMonthDay = 30
-
 const chunkArray = (arr: number[], chunkSize: number, leadingEmptyDays: number) => {
   const result = []
   let currentWeek = []
@@ -102,13 +99,13 @@ const handleNextMonth = () => {}
           @click="handlePreviousMonth()"
           class="previous-month bg-black/30 rounded-2xl text-bigger content-center"
         >
-          <
+          ⮜
         </button>
         <button
           @click="handleNextMonth()"
           class="next-month bg-black/30 rounded-2xl text-bigger content-center"
         >
-          >
+          ⮞
         </button>
       </div>
     </div>
