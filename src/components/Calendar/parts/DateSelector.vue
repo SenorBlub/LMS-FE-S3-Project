@@ -71,7 +71,7 @@ const handleDateClick = (weekIndex: number, dayIndex: number) => {
     selectedDayIndex.value[0] === weekIndex &&
     selectedDayIndex.value[1] === dayIndex
   ) {
-    selectedDayIndex.value = null
+    selectedDayIndex.value = [99, 99]
   } else {
     selectedDayIndex.value = [weekIndex, dayIndex]
   }
