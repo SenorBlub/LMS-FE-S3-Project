@@ -2,14 +2,14 @@
 
 <template>
   <div
-    class="wrapper-side grey-light-bg text-center content-center justify-items-center grey-darkest-text text-small round-edges"
+    class="flex wrapper-side content-center grey-light-bg grey-darkest-text text-small round-edges"
   >
     <div
-      class="profile-picture text-center justify-items-center grey-lightest-bg grey-darkest-text text-small round-full"
+      class="profile-picture content-center text-center justify-items-center grey-lightest-bg grey-darkest-text text-small round-full"
     >
       PFP
     </div>
-    <div class="text-center">USERNAME</div>
+    <div class="username content-center text-center">USERNAME</div>
   </div>
 </template>
 
@@ -17,5 +17,10 @@
 .profile-picture {
   height: 100px;
   width: 100px;
+}
+
+.username {
+  height: 100px;
+  width: 200px;
 }
 </style>

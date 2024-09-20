@@ -3,7 +3,7 @@ import ProfileBlock from './parts/ProfileBlock.vue'
 </script>
 
 <template>
-  <div class="wrapper-big grey-darkest-bg alpha-80 round-edges">
+  <div class="wrapper-big grey-darkest-bg alpha-80 round-edges backdrop-blur-sm">
     <ProfileBlock />
   </div>
 </template>
