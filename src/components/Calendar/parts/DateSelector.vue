@@ -9,8 +9,8 @@ const daysInMonth = [
   28, 29, 30
 ]
 const previousMonthLength = 31
-let leading: number[] = []
-let trailing: number[] = []
+let leading: number[] | null = []
+let trailing: number[] | null = []
 
 const daysOnCalendar = (selectedMonth: number[], previousMonthLength: number) => {
   const leftoverDays = 35 - selectedMonth.length
