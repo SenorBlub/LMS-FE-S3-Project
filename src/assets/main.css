@@ -265,6 +265,11 @@ a,
   height: 140px;
   padding: 20px;
 }
+.wrapper-side-big {
+  width: 450px;
+  height: 450px;
+  padding: 20px;
+}
 
 .wrapper-big {
   width: 1920px;

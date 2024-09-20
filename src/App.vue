@@ -5,17 +5,7 @@ import '@fontsource/ibm-plex-mono'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You updated it! Visual clue again" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <TheWelcome />
 </template>
 
 <style scoped>
@@ -25,18 +15,12 @@ header {
 
 .logo {
   display: block;
-  margin: 0 auto 2rem;
 }
 
 @media (min-width: 1024px) {
   header {
     display: flex;
-    place-items: center;
     padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
   }
 
   header .wrapper {
