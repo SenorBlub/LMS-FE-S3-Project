@@ -5,9 +5,42 @@ const selectedDayIndex = ref<[number, number] | null>(null)
 const month = 'september' //reference a store for date here
 const year = 2024 //reference a store for date here
 const daysInMonth = [
-  31, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-  27, 28, 29, 30, 1, 2, 3, 4
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27,
+  28, 29, 30
 ]
+const previousMonthLength = 31
+let leading: number[] = []
+let trailing: number[] = []
+
+const daysOnCalendar = (selectedMonth: number[], previousMonthLength: number) => {
+  const leftoverDays = 35 - selectedMonth.length
+  let leadingDays = []
+  let trailingDays = []
+  if (leftoverDays % 2 !== 1) {
+    for (let i = 0; i < leftoverDays / 2; i++) {
+      leadingDays.push(previousMonthLength - i)
+      trailingDays.push(i + 1)
+    }
+  } else {
+    for (let i = 0; i < (leftoverDays - 1) / 2; i++) {
+      leadingDays.push(previousMonthLength - i)
+    }
+    for (let i = 0; i < (leftoverDays + 1) / 2; i++) {
+      trailingDays.push(i + 1)
+    }
+  }
+  leadingDays.reverse()
+
+  console.log([leadingDays, selectedMonth, trailingDays])
+  let result = leadingDays.concat(selectedMonth)
+  result = result.concat(trailingDays)
+  leading = leadingDays
+  trailing = trailingDays
+  return result
+}
+
+const minMonthDay = 1
+const maxMonthDay = 30
 
 const chunkArray = (arr: number[], chunkSize: number, leadingEmptyDays: number) => {
   const result = []
@@ -32,15 +65,27 @@ const chunkArray = (arr: number[], chunkSize: number, leadingEmptyDays: number) 
 }
 
 const weeks = computed(() => {
-  return chunkArray(daysInMonth, 7, 0)
+  return chunkArray(daysOnCalendar(daysInMonth, previousMonthLength), 7, 0)
 })
 
 const handleDateClick = (weekIndex: number, dayIndex: number) => {
-  selectedDayIndex.value = [weekIndex, dayIndex]
+  if (
+    selectedDayIndex.value &&
+    selectedDayIndex.value[0] === weekIndex &&
+    selectedDayIndex.value[1] === dayIndex
+  ) {
+    selectedDayIndex.value = null
+  } else {
+    selectedDayIndex.value = [weekIndex, dayIndex]
+  }
   console.log(
     `Selected: Week ${weekIndex}, Day ${dayIndex}, Date: ${weeks.value[weekIndex][dayIndex]}`
   )
 }
+
+const handlePreviousMonth = () => {}
+
+const handleNextMonth = () => {}
 </script>
 
 <template>
@@ -53,8 +98,18 @@ const handleDateClick = (weekIndex: number, dayIndex: number) => {
         <div class="filler-div"></div>
       </div>
       <div class="month-selector">
-        <button class="previous-month bg-black/30 rounded-2xl text-bigger content-center"><</button>
-        <button class="next-month bg-black/30 rounded-2xl text-bigger content-center">></button>
+        <button
+          @click="handlePreviousMonth()"
+          class="previous-month bg-black/30 rounded-2xl text-bigger content-center"
+        >
+          <
+        </button>
+        <button
+          @click="handleNextMonth()"
+          class="next-month bg-black/30 rounded-2xl text-bigger content-center"
+        >
+          >
+        </button>
       </div>
     </div>
     <div class="flex flex-col date-container text-opacity-100">
@@ -85,14 +140,14 @@ const handleDateClick = (weekIndex: number, dayIndex: number) => {
             'rounded-l-full': selectedDayIndex && dayIndex === 0,
             'text-opacity-20':
               weeks[weekIndex][dayIndex] &&
-              weeks[weekIndex][dayIndex + 1] &&
-              weeks[weekIndex][dayIndex - 1] &&
-              (weeks[weekIndex][dayIndex] > weeks[weekIndex][dayIndex + 1] ||
-                weeks[weekIndex][dayIndex] < weeks[weekIndex][dayIndex - 1]),
+              ((weekIndex < 1 && weeks[weekIndex][dayIndex] > 10) ||
+                (weekIndex > 3 && weeks[weekIndex][dayIndex] <= trailing[trailing.length - 1])) &&
+              (leading.includes(weeks[weekIndex][dayIndex]) ||
+                trailing.includes(weeks[weekIndex][dayIndex])),
             'cursor-pointer': day !== null,
             'text-center text-white flex items-center justify-center': true
           }"
-          class="px-5 h-full w-20"
+          class="px-5 h-full select-none w-20"
         >
           {{ day }}
         </span>
