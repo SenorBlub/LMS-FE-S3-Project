@@ -26,6 +26,10 @@ a,
   -webkit-text-stroke-width: thin;
 }
 
+.text-biggerest {
+  font-size: 72px;
+}
+
 .text-biggest {
   font-size: 52px;
 }

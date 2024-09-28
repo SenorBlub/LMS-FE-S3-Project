@@ -1,21 +1,29 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
+import { dateStore } from '../stores/DateStore'
+import { storeToRefs } from 'pinia'
+
+let DateStore = dateStore()
+let {
+  months,
+  currentMonthIndex,
+  currentYear,
+  currentMonth,
+  currentDay,
+  getPreviousMonth,
+  selectedWeek
+} = storeToRefs(DateStore)
 
 const selectedDayIndex = ref<[number, number]>()
-const month = 'september' //reference a store for date here
-const year = 2024 //reference a store for date here
-const daysInMonth = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27,
-  28, 29, 30
-]
-const previousMonthLength = 31
+let previousMonthLength = getPreviousMonth.value.days
 let leading: number[] = []
 let trailing: number[] = []
 
-const daysOnCalendar = (selectedMonth: number[], previousMonthLength: number) => {
-  const leftoverDays = 35 - selectedMonth.length
+const daysOnCalendar = (selectedMonth: number, previousMonthLength: number) => {
+  const leftoverDays = 35 - selectedMonth
   let leadingDays = []
   let trailingDays = []
+  let monthDays = []
   if (leftoverDays % 2 !== 1) {
     for (let i = 0; i < leftoverDays / 2; i++) {
       leadingDays.push(previousMonthLength - i)
@@ -31,8 +39,12 @@ const daysOnCalendar = (selectedMonth: number[], previousMonthLength: number) =>
   }
   leadingDays.reverse()
 
-  console.log([leadingDays, selectedMonth, trailingDays])
-  let result = leadingDays.concat(selectedMonth)
+  for (let i = 0; i < selectedMonth; i++) {
+    monthDays.push(i + 1)
+  }
+
+  console.log([leadingDays, monthDays, trailingDays])
+  let result = leadingDays.concat(monthDays)
   result = result.concat(trailingDays)
   leading = leadingDays
   trailing = trailingDays
@@ -62,27 +74,76 @@ const chunkArray = (arr: number[], chunkSize: number, leadingEmptyDays: number) 
 }
 
 const weeks = computed(() => {
-  return chunkArray(daysOnCalendar(daysInMonth, previousMonthLength), 7, 0)
+  return chunkArray(daysOnCalendar(currentMonth.value.days, previousMonthLength), 7, 0)
 })
 
 const handleDateClick = (weekIndex: number, dayIndex: number) => {
-  if (
-    selectedDayIndex.value &&
-    selectedDayIndex.value[0] === weekIndex &&
-    selectedDayIndex.value[1] === dayIndex
-  ) {
-    selectedDayIndex.value = [99, 99]
-  } else {
-    selectedDayIndex.value = [weekIndex, dayIndex]
+  if (weekIndex != 99 && dayIndex != 99) {
+    let startMonth = currentMonth.value
+    let endMonth = currentMonth.value
+    let selectedMonthIndex = currentMonthIndex.value as number
+    let startYear = currentYear.value
+    let endYear = currentYear.value
+    let endDay = 0
+    if (
+      selectedDayIndex.value &&
+      selectedDayIndex.value[0] === weekIndex &&
+      selectedDayIndex.value[1] === dayIndex
+    ) {
+      selectedDayIndex.value = [99, 99]
+    } else {
+      selectedDayIndex.value = [weekIndex, dayIndex]
+    }
+    endDay = weeks.value[weekIndex][dayIndex] + 6
+    if (endDay > startMonth.days) {
+      endDay -= startMonth.days
+    }
+    if (weekIndex === 0 && weeks.value[weekIndex][dayIndex] > 10) {
+      if (currentMonthIndex.value > 0) {
+        startMonth = months.value[selectedMonthIndex - 1]
+      } else {
+        startMonth = months.value[11]
+        startYear--
+      }
+    } else if (weekIndex >= 3 && endDay < 15) {
+      if (currentMonthIndex.value < 11) {
+        endMonth = months.value[selectedMonthIndex + 1]
+      } else {
+        endMonth = months.value[0]
+        endYear++
+      }
+    }
+    selectedWeek.value = {
+      startYear: startYear,
+      endYear: endYear,
+      startMonth: startMonth,
+      endMonth: endMonth,
+      startDay: weeks.value[weekIndex][dayIndex],
+      endDay: endDay
+    }
+    currentDay.value = weeks.value[weekIndex][dayIndex]
+    if (selectedDayIndex.value && selectedDayIndex.value[0] !== 99) {
+      console.log(
+        `Selected: Week ${weekIndex}, Day ${dayIndex}, Date: ${weeks.value[weekIndex][dayIndex]} - ${currentMonth.value.name} - ${currentYear.value}`
+      )
+      console.log(selectedWeek.value)
+    }
   }
-  console.log(
-    `Selected: Week ${weekIndex}, Day ${dayIndex}, Date: ${weeks.value[weekIndex][dayIndex]}`
-  )
 }
 
-const handlePreviousMonth = () => {}
+// HANDLEMONTHCHANGE -> CHANGING MONTH SHOULD ALLOW WEEK HIGHLIGHT TO CONTINUE TO EXIST BUT IN THE RIGHT SPOT PREFERABLY
 
-const handleNextMonth = () => {}
+const handlePreviousMonth = () => {
+  DateStore.previousMonth()
+  if (selectedDayIndex.value) handleDateClick(99, 99)
+  previousMonthLength = getPreviousMonth.value.days
+}
+
+const handleNextMonth = () => {
+  DateStore.nextMonth()
+  if (selectedDayIndex.value) handleDateClick(99, 99)
+  previousMonthLength = getPreviousMonth.value.days
+}
 </script>
 
 <template>
@@ -90,7 +151,7 @@ const handleNextMonth = () => {}
     <div class="flex date-selector-container grey-lightest-text">
       <div class="date-display-container grey-lightest-text">
         <div class="date-display text-smaller py-5 text-white text-opacity-100 bold-title">
-          {{ month }} - {{ year }}
+          {{ currentMonth.name }} - {{ currentYear }}
         </div>
         <div class="filler-div"></div>
       </div>
